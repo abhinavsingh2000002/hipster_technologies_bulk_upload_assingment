@@ -10,10 +10,6 @@ use Yajra\DataTables\DataTables;
 
 class BulkImportController extends Controller
 {
-    public function index()
-    {
-        return view('product.index');
-    }
 
     public function uploadCsv(Request $request)
     {
@@ -60,5 +56,7 @@ class BulkImportController extends Controller
                 return $p->created_at->format('Y-m-d H:i');
             })
             ->make(true);
+        dd($data
+        );
     }
 }
