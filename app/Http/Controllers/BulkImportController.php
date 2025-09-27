@@ -14,7 +14,7 @@ class BulkImportController extends Controller
     public function uploadCsv(Request $request)
     {
         $request->validate([
-            'csv_file' => 'required|mimes:csv,txt|max:102400',
+            'csv_file' => 'required|mimes:csv,txt|max:1048576',
         ]);
 
         $file = $request->file('csv_file');
